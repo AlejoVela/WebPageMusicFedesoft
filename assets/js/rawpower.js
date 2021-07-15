@@ -7,13 +7,13 @@ Duración: 3:11
 
 */
 let datosrp = document.getElementById("datosrp");
-let nombre = document.getElementById("nombrerp");
-let album = document.getElementById("albumrp");
-let anio = document.getElementById("aniorp");
-let compositor = document.getElementById("compositorrp");
-let tiempo = document.getElementById("tiemporp");
+let nombreRaw = document.getElementById("nombrerp");
+let albumRaw = document.getElementById("albumrp");
+let anioRaw = document.getElementById("aniorp");
+let compositorRaw = document.getElementById("compositorrp");
+let tiempoRaw = document.getElementById("tiemporp");
 
-const ingresarDatos = () => {
+const ingresarDatosRaw = () => {
   let nombrerp = prompt("Ingrese su nombre");
   let albumrp = prompt("Ingrese el nombre del álbum");
   let aniorp = prompt("Ingrese el año de lanzamiento");
@@ -32,7 +32,7 @@ const ingresarDatos = () => {
     tiemporp == null ||
     tiemporp === ""
   ) {
-    validarStorage();
+    validarStorageRaw();
     albumrp = albumrp.toLowerCase();
     aniorp = aniorp.toLowerCase();
     compositorrp = compositorrp.toLowerCase();
@@ -44,73 +44,73 @@ const ingresarDatos = () => {
       compositorrp !== "iggy pap" ||
       tiemporp !== "3:11"
     ) {
-      album.innerHTML = "Error en la información ";
+      albumRaw.innerHTML = "Error en la información ";
       albumrp = "";
       localStorage.setItem("albumrp", albumrp);
-      anio.innerHTML = "";
+      anioRaw.innerHTML = "";
       aniorp = "";
       localStorage.setItem("aniorp", aniorp);
-      compositor.innerHTML = "";
+      compositorRaw.innerHTML = "";
       compositorrp = "";
       localStorage.setItem("compositorrp", compositorrp);
-      tiempo.innerHTML = "";
+      tiempoRaw.innerHTML = "";
       tiemporp = "";
       localStorage.setItem("tiemporp", tiemporp);
 
     } else {
-      nombre.innerHTML = "Nombre Usuario: " + nombrerp;
+      nombreRaw.innerHTML = "Nombre Usuario: " + nombrerp;
       localStorage.setItem("nombrerp", nombrerp);
 
-      album.innerHTML = "Álbum: " + albumrp;
+      albumRaw.innerHTML = "Álbum: " + albumrp;
       localStorage.setItem("albumrp", albumrp);
 
-      anio.innerHTML = "Año: " + aniorp;
+      anioRaw.innerHTML = "Año: " + aniorp;
       localStorage.setItem("aniorp", aniorp);
 
-      compositor.innerHTML = "Compositor: " + compositorrp;
+      compositorRaw.innerHTML = "Compositor: " + compositorrp;
       localStorage.setItem("compositorrp", compositorrp);
 
-      tiempo.innerHTML = "Tiempo de duración: " + tiemporp;
+      tiempoRaw.innerHTML = "Tiempo de duración: " + tiemporp;
       +" min";
       localStorage.setItem("tiemporp", tiemporp);
     }
   }
 };
 
-const validarStorage = () => {
+const validarStorageRaw = () => {
   if (localStorage.getItem("nombrerp")) {
-    nombre.innerHTML = "Nombre Usuario: " + localStorage.getItem("nombrerp");
+    nombreRaw.innerHTML = "Nombre Usuario: " + localStorage.getItem("nombrerp");
   } else {
-    nombre.innerHTML = "Nombre: 'Sin datos' ";
+    nombreRaw.innerHTML = "Nombre: 'Sin datos' ";
   }
 
   if (localStorage.getItem("albumrp")) {
-    album.innerHTML = "Álbum: " + localStorage.getItem("albumrp");
+    albumRaw.innerHTML = "Álbum: " + localStorage.getItem("albumrp");
   } else {
-    album.innerHTML = "Álbum: 'Sin datos' ";
+    albumRaw.innerHTML = "Álbum: 'Sin datos' ";
   }
 
   if (localStorage.getItem("aniorp")) {
-    anio.innerHTML = "Año: " + localStorage.getItem("aniorp");
+    anioRaw.innerHTML = "Año: " + localStorage.getItem("aniorp");
   } else {
-    anio.innerHTML = "Año: 'Sin datos' ";
+    anioRaw.innerHTML = "Año: 'Sin datos' ";
   }
 
   if (localStorage.getItem("compositorrp")) {
-    compositor.innerHTML =
+    compositorRaw.innerHTML =
       "Compositor: " + localStorage.getItem("compositorrp");
   } else {
-    compositor.innerHTML = "Compositor: 'Sin datos' ";
+    compositorRaw.innerHTML = "Compositor: 'Sin datos' ";
   }
 
   if (localStorage.getItem("tiemporp")) {
-    tiempo.innerHTML =
+    tiempoRaw.innerHTML =
       "Tiempo de duracion: " + localStorage.getItem("tiemporp") + " min";
   } else {
-    tiempo.innerHTML = "Tiempo de duracion: 'Sin datos' ";
+    tiempoRaw.innerHTML = "Tiempo de duracion: 'Sin datos' ";
   }
 };
-validarStorage();
+validarStorageRaw();
 datosrp.onclick = function () {
-  ingresarDatos();
+  ingresarDatosRaw();
 };

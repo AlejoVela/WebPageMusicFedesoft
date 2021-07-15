@@ -7,13 +7,13 @@ Duración: 6:48
 
 */
 let datoshb = document.getElementById("datoshb");
-let nombre = document.getElementById("nombrehb");
-let album = document.getElementById("albumhb");
-let anio = document.getElementById("aniohb");
-let compositor = document.getElementById("compositorhb");
-let tiempo = document.getElementById("tiempohb");
+let nombreHuman = document.getElementById("nombrehb");
+let albumHuman = document.getElementById("albumhb");
+let anioHuman = document.getElementById("aniohb");
+let compositorHuman = document.getElementById("compositorhb");
+let tiempoHuman = document.getElementById("tiempohb");
 
-const ingresarDatos = () => {
+const ingresarDatosHumans = () => {
   let nombrehb = prompt("Ingrese su nombre");
   let albumhb = prompt("Ingrese el nombre del álbum");
   let aniohb = prompt("Ingrese el año de lanzamiento");
@@ -32,7 +32,7 @@ const ingresarDatos = () => {
     tiempohb == null ||
     tiempohb === ""
   ) {
-    validarStorage();
+    validarStorageHumans();
     albumhb = albumhb.toLowerCase();
     aniohb = aniohb.toLowerCase();
     compositorhb = compositorhb.toLowerCase();
@@ -44,73 +44,73 @@ const ingresarDatos = () => {
       compositorhb !== "johnny thunders" ||
       tiempohb !== "6:48"
     ) {
-      album.innerHTML = "Error en la información ";
+      albumHuman.innerHTML = "Error en la información ";
       albumhb = "";
       localStorage.setItem("albumhb", albumhb);
-      anio.innerHTML = "";
+      anioHuman.innerHTML = "";
       aniohb = "";
       localStorage.setItem("aniohb", aniohb);
-      compositor.innerHTML = "";
+      compositorHuman.innerHTML = "";
       compositorhb = "";
       localStorage.setItem("compositorhb", compositorhb);
-      tiempo.innerHTML = "";
+      tiempoHuman.innerHTML = "";
       tiempohb = "";
       localStorage.setItem("tiempohb", tiempohb);
 
     } else {
-      nombre.innerHTML = "Nombre Usuario: " + nombrehb;
+      nombreHuman.innerHTML = "Nombre Usuario: " + nombrehb;
       localStorage.setItem("nombrehb", nombrehb);
 
-      album.innerHTML = "Álbum: " + albumhb;
+      albumHuman.innerHTML = "Álbum: " + albumhb;
       localStorage.setItem("albumhb", albumhb);
 
-      anio.innerHTML = "Año: " + aniohb;
+      anioHuman.innerHTML = "Año: " + aniohb;
       localStorage.setItem("aniohb", aniohb);
 
-      compositor.innerHTML = "Compositor: " + compositorhb;
+      compositorHuman.innerHTML = "Compositor: " + compositorhb;
       localStorage.setItem("compositorhb", compositorhb);
 
-      tiempo.innerHTML = "Tiempo de duración: " + tiempohb;
+      tiempoHuman.innerHTML = "Tiempo de duración: " + tiempohb;
       +" min";
       localStorage.setItem("tiempohb", tiempohb);
     }
   }
 };
 
-const validarStorage = () => {
+const validarStorageHumans = () => {
   if (localStorage.getItem("nombrehb")) {
-    nombre.innerHTML = "Nombre Usuario: " + localStorage.getItem("nombrehb");
+    nombreHuman.innerHTML = "Nombre Usuario: " + localStorage.getItem("nombrehb");
   } else {
-    nombre.innerHTML = "Nombre: 'Sin datos' ";
+    nombreHuman.innerHTML = "Nombre: 'Sin datos' ";
   }
 
   if (localStorage.getItem("albumhb")) {
-    album.innerHTML = "Álbum: " + localStorage.getItem("albumhb");
+    albumHuman.innerHTML = "Álbum: " + localStorage.getItem("albumhb");
   } else {
-    album.innerHTML = "Álbum: 'Sin datos' ";
+    albumHuman.innerHTML = "Álbum: 'Sin datos' ";
   }
 
   if (localStorage.getItem("aniohb")) {
-    anio.innerHTML = "Año: " + localStorage.getItem("aniohb");
+    anioHuman.innerHTML = "Año: " + localStorage.getItem("aniohb");
   } else {
-    anio.innerHTML = "Año: 'Sin datos' ";
+    anioHuman.innerHTML = "Año: 'Sin datos' ";
   }
 
   if (localStorage.getItem("compositorhb")) {
-    compositor.innerHTML =
+    compositorHuman.innerHTML =
       "Compositor: " + localStorage.getItem("compositorhb");
   } else {
-    compositor.innerHTML = "Compositor: 'Sin datos' ";
+    compositorHuman.innerHTML = "Compositor: 'Sin datos' ";
   }
 
   if (localStorage.getItem("tiempohb")) {
-    tiempo.innerHTML =
+    tiempoHuman.innerHTML =
       "Tiempo de duracion: " + localStorage.getItem("tiempohb") + " min";
   } else {
-    tiempo.innerHTML = "Tiempo de duracion: 'Sin datos' ";
+    tiempoHuman.innerHTML = "Tiempo de duracion: 'Sin datos' ";
   }
 };
-validarStorage();
+validarStorageHumans();
 datoshb.onclick = function () {
-  ingresarDatos();
+  ingresarDatosHumans();
 };
