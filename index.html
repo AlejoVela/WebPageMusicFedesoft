@@ -76,9 +76,20 @@
 
   <div class="main">
     <div class="container tim-container">
+
       <div class="tim-title">
-        <h2 class="display-4">The Spaguetti Incident?</h2>
-      </div>
+        <h2 class="display-4"><span id="starQuestions" data-toggle="collapse" >★</span>&nbsp;The Spaguetti Incident?</h2>
+    </div>  
+    <div class="card card-body">
+      <h3>
+        Año publicación: <b><span id="anio"></span></b><br />
+        Duración del album: <b><span id="duracion"></b></span><br />
+        Discográfica: <b><span id="discografica"></b></span><br />
+        Géneros: <b><span id="generos"></span></b><br />
+      </h3>
+      
+    </div>  
+
       <div>
         <div class="row">
 
@@ -335,6 +346,13 @@
                             <img src="assets/img/humans-being-photo.jpg" alt="humans-being-photo"
                               class="img-rounded img-responsive img-dog">
                           </div>
+                          <button id="datoshb">Ingresar Datos de Canción</button>
+                          <h2 id="nombrehb">Nombre: "Sin datos"</h2>
+                          <h2 id="albumhb">Album: "Sin datos"</h2>
+                          <h2 id="aniohb">Año: "Sin datos"</h2>
+                          <h2 id="compositorhb">Compositor: "Sin datos"</h2>
+                          <h2 id="tiempohb">Tiempo de duración: "Sin datos"</h2>
+    
                         </div>
                         <div class="col-md-5 col-sm-12">
                           <h1 class="text-center">Human beings
@@ -486,7 +504,14 @@
                           <div class="text-center">
                             <img src="assets/img/rawpower.jpg" alt="round-power-song"
                               class="img-rounded img-responsive img-dog">
-                          </div>
+                              <button id="datosrp">Ingresar Datos de Canción</button>
+                              <h2 id="nombrerp">Nombre: "Sin datos"</h2>
+                              <h2 id="albumrp">Album: "Sin datos"</h2>
+                            <h2 id="aniorp">Año: "Sin datos"</h2>
+                            <h2 id="compositorrp">Compositor: "Sin datos"</h2>
+                            <h2 id="tiemporp">Tiempo de duración: "Sin datos"</h2>
+  
+                          </div>                          
                         </div>
                         <div class="col-md-5 col-sm-12">
                           <h1 class="text-center">Raw Power
@@ -953,61 +978,67 @@
                   <!--//////-->
                   <div class="container tim-container">
                     <div id="extras">
-                      <div class="space"></div>
+                        <div class="space"></div>
                       <div class="row">
-                        <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1">
+                        <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
                           <div class="text-center">
-                            <img src="./assets/img/you_cant_put_your_arms_around_a_memory.jpg" alt="Rounded Image"
-                              class="img-rounded img-responsive img-dog">
+                            <img src="assets/img/you_cant_put_your_arms_around_a_memory.jpg" alt="Rounded Image" class="img-rounded img-responsive img-dog">
+                            <div>
+                              <h3 id="nombreYouCantPutYourArmsAroundAMemory"></h3>
+                              <h3 id="albumYouCantPutYourArmsAroundAMemory"></h3>
+                              <h3 id="anioYouCantPutYourArmsAroundAMemory"></h3>
+                              <h3 id="compositorYouCantPutYourArmsAroundAMemory"></h3>
+                              <h3 id="tiempoYouCantPutYourArmsAroundAMemory"></h3>
+                              <button id="pruebaYouCantPutYourArmsAroundAMemory">Iniciar test</button>
+                            </div>
                           </div>
                         </div>
-                        <div class="col-md-8 col-sm-12 text-center">
+                        <div class="col-md-5 col-sm-12 text-center">
                           <h1 class="text-center">You Can't Put Your Arms Around A Memory
-
-                            <small class="subtitle">GUNS N' ROSES</small>
-                          </h1>
+                  
+                          <small class="subtitle">GUNS N' ROSES</small></h1>
                           <hr>
                           <p>It doesn't pay to try
-                            All the smart boys know why
-                            It doesn't mean, I didn't try
-                            I just never know, why</p>
-
+                          All the smart boys know why
+                          It doesn't mean, I didn't try
+                          I just never know, why</p>
+                  
                           <p>It isn't 'cause I'm all alone
-                            Oh, baby, you're not home
-                            And when I'm home
-                            Big deal, I'm still alone</p>
-
+                          Oh, baby, you're not home
+                          And when I'm home
+                          Big deal, I'm still alone</p>
+                  
                           <p>It's so restless, I am
-                            Beat my head against a pole
-                            Try to knock some sense, down 'side my bones
-                            And even though it don't show
-                            Those guys are so old</p>
-
+                          Beat my head against a pole
+                          Try to knock some sense, down 'side my bones
+                          And even though it don't show
+                          Those guys are so old</p>
+                  
                           <p>Can't put your arms around a memory
-                            Can't put your arms around a memory
-                            Can't put your arms around a memory
-                            Don't try
-                            Don't try</p>
-
+                          Can't put your arms around a memory
+                          Can't put your arms around a memory
+                          Don't try
+                          Don't try</p>
+                  
                           <p>You're just a basket case
-                            And you got no name
-                            Could you live with me?
-                            Go on and say
-                            And even though it don't show
-                            Those guys are so old</p>
-
+                          And you got no name
+                          Could you live with me?
+                          Go on and say
+                          And even though it don't show
+                          Those guys are so old</p>
+                  
                           <p>Can't put your arms around a memory
-                            Can't put your arms around a memory
-                            Can't put your arms around a memory
-                            Can't put your arms around a memory
-                            Don't try
-                            Don't try</p>
-
+                          Can't put your arms around a memory
+                          Can't put your arms around a memory
+                          Can't put your arms around a memory
+                          Don't try
+                          Don't try</p>
+                  
                           <p>Johnny you're me
-                            Yeah, you're memory
-                            I want to put my arms around your memory
-                            I can't try, I can't try...don't try</p>
-
+                          Yeah, you're memory
+                          I want to put my arms around your memory
+                          I can't try, I can't try...don't try</p>
+                          
                         </div>
                       </div>
                     </div>
@@ -1031,68 +1062,74 @@
                   <!--//////-->
                   <div class="container tim-container">
                     <div id="extras">
-                      <div class="space"></div>
+                        <div class="space"></div>
                       <div class="row">
-                        <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1">
+                        <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
                           <div class="text-center">
-                            <img src="./assets/img/down_on_the_farm.jpg" alt="Rounded Image"
-                              class="img-rounded img-responsive img-dog">
+                            <img src="assets/img/down_on_the_farm.jpg" alt="Rounded Image" class="img-rounded img-responsive img-dog">
+                            <div>
+                              <h3 id="nombreDownOnTheFarm"></h3>
+                              <h3 id="albumDownOnTheFarm"></h3>
+                              <h3 id="anioDownOnTheFarm"></h3>
+                              <h3 id="compositorDownOnTheFarm"></h3>
+                              <h3 id="tiempoDownOnTheFarm"></h3>
+                              <button id="pruebaDownOnTheFarm">Iniciar test</button>
+                             </div>
                           </div>
                         </div>
-                        <div class="col-md-8 col-sm-12 text-center">
+                        <div class="col-md-5 col-sm-12 text-center">
                           <h1 class="text-center">Down on the farm
-
-                            <small class="subtitle">GUNS N' ROSES</small>
-                          </h1>
+                
+                          <small class="subtitle">GUNS N' ROSES</small></h1>
                           <hr>
                           <p>All I need is some inspiration
                             Before I do somebody some harm
                             I feel just like a vegetable
                             Down here on the farm</p>
-
+                
                           <p>Nobody comes to see me
                             Nobody here to turn me on
                             I ain't even got a lover
                             Down here on the farm</p>
-
+                
                           <p>They told me to get healthy
                             They told me to get some sun
                             But boredom eats me like ketchup
                             Down here on the farm</p>
-
+                
                           <p>Drinking lemonade shanty
                             Ain't no body gonna do me harm
                             But I'm like a fish out of water
                             Down here on the farm</p>
-
+                
                           <p>I write a thousand letters
                             'Til my fingers all gone numb
                             But I never see no postman
                             Down here on the farm</p>
-
+                
                           <p>I call my baby on the telephone
                             I say come down and have some fun
                             But she knows what the score is
                             Down here on the farm</p>
-
-                          <p>I can't fall in love with a wheat field
+                            
+                            <p>I can't fall in love with a wheat field
                             I can't fall in love with a barn
                             When everything smells like horse shit
                             Down here on the farm</p>
-
-                          <p>Blue skies and swimming pools
+                
+                            <p>Blue skies and swimming pools
                             Add so much charm
                             But I'd rather be back in Soho
                             Than down here on the farm</p>
-
-                          <p>On the fucking farm!</p>
-
-                          <p>Are you born in a fucking barn or what?</p>
-
+                
+                            <p>On the fucking farm!</p>
+                
+                            <p>Are you born in a fucking barn or what?</p>
+                          
                         </div>
                       </div>
                     </div>
-                  </div>
+                </div>
                   <!--//////-->
                 </div>
               </div>
@@ -1146,5 +1183,9 @@
 <script src="./assets/js/validationIDontCareAboutYou.js"></script>
 <script src="./assets/js/validationLookAtYourGameGirl.js"></script>
 <script src="./assets/js/scriptAttitude.js"></script>
+<script src="./assets/js/spaguetti.js"></script>
+<script src="./assets/js/scriptdownAndYouCan.js"></script>
+<script src="./assets/js/humanbeings.js"></script>
+<script src="./assets/js/rawpower.js"></script>
 
 </html>

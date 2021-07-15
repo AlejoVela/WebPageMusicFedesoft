@@ -1,4 +1,7 @@
-
+#starQuestions{
+    color:#de402b;
+    cursor: pointer; 
+}
 .tim-container{
     background: #ffffff;
 
